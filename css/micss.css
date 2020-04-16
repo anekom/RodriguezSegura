@@ -1,0 +1,30 @@
+.wrapper {
+
+  width: 500px;
+  height: 500px;
+}
+
+.box {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.contenedor{
+    min-height: 600px;
+
+}
+
+.gauge {
+  width: 500px;
+  height: 500px;
+
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.testrow{margin-top: 100px; margin-left: 20%;}
+
+.medidor{margin-top: 10px; margin-left: 20%;}

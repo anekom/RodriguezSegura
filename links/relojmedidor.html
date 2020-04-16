@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reloj Medidor</title>
+    <script src="../js/raphael-2.1.4.min.js"></script>
+    <script src="../js/justgage.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/mycss.css">
+    <link rel="stylesheet" href="../css/micss.css">
+  </head>
+  <body>
+
+
+    <!-- Inicio menu -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-custom navbar-light">
+
+      <a class="navbar-brand" href="../index.html"><img src="../img/logo.gif" class="imglogo" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="areasact.html">Áreas de Actuación</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="miembros.html">Miembros</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="contactus.html">Cont&aacute;ctanos</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- Fin menu -->
+
+    <!-- foto balanza -->
+    <div class="container imglibra">
+      <div class="row centrado">
+        <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+          <h2 class="texto-titulo">Rodriguez Segura</h2>
+          <h3 class="texto-titulo">Abogados - Consultores</h3>
+          <h4>91 576 61 21 - 675 85 64 31</h4>
+        </div>
+        <div class="col-0 col-sm-0 col-lg-6 col-xl-6">
+          <img class="balanza" src="../img/balanza.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- fin foto balanza -->
+
+    <!-- introduccion -->
+    <div class=" row centrado espacio">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+        <img src="../img/administrativo.png" alt="" width="200" height="200">
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <p class="texto-test">La reciente reforma del Código Penal, en vigor desde el 15 de julio de 2015 (Ley Orgánica 1/2015, de 30 de marzo), específica en su artículo 31 bis, entre otros aspectos, que dicha responsabilidad penal puede quedar exenta si el órgano de administración ha adoptado y ejecutado con eficacia, antes de la comisión del delito, modelos de organización y gestión que incluyen las medidas de vigilancia y control idóneas para prevenir delitos de la misma naturaleza o para reducir de forma significativa el riesgo de su comisión.
+
+        Sólo hay una forma de evitar o atenuar la pena en caso de que se de la comisión del delito, demostrar que la empresa ha sido diligente, adoptando las medidas necesarias mediante la implantación de un modelo/sistema/programa de Prevención de Riesgos Penales, y probando que el delito se ha cometido a pesar de su diligencia.
+
+        Hemos preparado un breve test que le permitirá diagnosticar el nivel de riesgo de su organización. Introduzca su correo electrónico y comience su evaluación:</p>
+      </div>
+      <hr>
+    </div>
+    <!-- fin introduccion -->
+
+    <!-- test -->
+
+    <form class="form email" action="" method="post">
+      <label for="email">Introduce tu eMail:</label>
+      <input type="email" name="email" id="email" value="">
+    </form>
+
+    <div class="row testrow">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pregunta">
+        <p id="pregunta" class="centrado">¿En tú empresa los trabajadores suelen tener accidentes?</p><br>
+        <input id="si" class="centrado form-check-input" type="radio" name="respuesta" value="si"> <label for="si">Si</label><br>
+        <input id="no" class="centrado form-check-input" type="radio" name="respuesta" value="no"> <label for="no">No</label><br>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 boton">
+        <button type="button" class="btn btn-primary centrado" onclick="comprobar() ">Siguiente pregunta</button>
+      </div>
+    </div>
+
+    <div class="row medidor">
+      <div class="box col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 medidor">
+          <div id="g2" class="gauge"> <p> <b>Índice de peligrosidad</b></p> </div>
+      </div>
+    </div>
+
+
+    <!-- fin test -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4 crcookies">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row margen-footer">
+
+          <!-- Grid column -->
+          <div class="col-md-4 mt-md-0 mt-3 ">
+
+            <!-- Content -->
+            <h5 class="text-uppercase centrado">Informacion de contacto</h5>
+            <p class="justificado">Teléfono de contacto: 91 576 61 21</p>
+            <p class="justificado">Fax: 91 575 64 39</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 mb-md-0 mb-4">
+
+            <!-- Links -->
+            <h5 class="text-uppercase ">Areas de Actuación Juridicas</h5>
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+
+              <ul class="list-unstyled justificado">
+                <li>
+                  <a href="areasact.html#anchor_fuerzasarm">Fuerzas del orden</a>
+                </li>
+                <li>
+                  <a href="areasact.html#anchor_terrorismo">Terrorismo</a>
+                </li>
+                <li>
+                  <a href="areasact.html#anchor_Herencias">Herencias y donaciones</a>
+                </li>
+                <li>
+                  <a href="areasact.html#anchor_consursal">Derecho Concursal</a>
+                </li>
+                <li>
+                  <a href="areasact.html#anchor_competencia">Defensa de la competencia</a>
+                </li>
+              </ul>
+
+              </div>
+
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+
+                <ul class="list-unstyled justificado">
+
+                  <li>
+                    <a href="areasact.html#anchor_empresarial">Empresarial</a>
+                  </li>
+                  <li>
+                    <a href="areasact.html#anchor_mercantil">Contratos Mercantiles</a>
+                  </li>
+                  <li>
+                    <a href="areasact.html#anchor_hipotecario">Bancario - hipotecario</a>
+                  </li>
+                  <li>
+                    <a href="areasact.html#anchor_extrangeria">Extrangería</a>
+                  </li>
+                  <li>
+                    <a href="areasact.html#anchor_jurlaboralss">Laboral y Seguridad Social</a>
+                  </li>
+                </ul>
+
+              </div>
+
+
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 mb-md-0 mb-4">
+
+            <!-- Links -->
+            <h5 class="text-uppercase centrado">Areas de Actuación Administrativas</h5>
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+
+              <ul class="list-unstyled justificado">
+                <li>
+                  <a href="areasact.html#anchor_gcontable">Gestión contable</a>
+                </li>
+                <li>
+                  <a href="areasact.html#anchor_gfiscal">Gestión fiscal</a>
+                </li>
+
+              </ul>
+
+              </div>
+
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+
+                <ul class="list-unstyled justificado">
+                  <li>
+                    <a href="areasact.html#anchor_laboralss">Laboral - Seguridad Social</a>
+                  </li>
+                  <li>
+                    <a href="areasact.html#anchor_afinanciero">Asesoramiento financiero</a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 mb-md-0 mb-4">
+
+            <!-- Links -->
+            <h5 class="text-uppercase centrado">Miembros</h5>
+
+            <div class="row">
+
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+                <ul class="list-unstyled justificado">
+                  <li>
+                    <a href="miembros.html#anchor_juancarlos">Juan Carlos</a>
+                  </li>
+                  <li>
+                    <a href="miembros.html#anchor_pablo">Pablo Fernández</a>
+                  </li>
+                  <li>
+                    <a href="miembros.html#anchor_beatriz">Viviana Fernández</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+                <ul class="list-unstyled justificado">
+                  <li>
+                    <a href="miembros.html#anchor_amparo">Amparo Monasterio</a>
+                  </li>
+                  <li>
+                    <a href="miembros.html#anchor_jesus">Andrés Gacía</a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="politicaprivacidad.html"  target="_blank"> RSAbogados.com</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="text/javascript">
+
+
+
+      var preguntas = [
+        "¿Su empresa a sido procesada por alguna actividad ilicita?",
+        "¿Conoce alguna empresa de su sector que haya sido procesada por actividades ilicitas?",
+        "¿Su empresa tiene implantada una politica de control de riesgos?",
+        "¿Dispone su empresa de un canal de denuncias internas?",
+        "¿Dispone su empresa de un organo de control independiente de los administradores?",
+        "¿Recibe o realiza su empresa regalos que pudieran excederse de las cortesías tradicionales?",
+        "¿Contrata su empresa con el sector público?",
+        "¿Se han encontrado, se encuentran o es probable que se encuentren trabajadores de su empresa en situación irregular o que se incumplan las obligaciones con la Segdad Social?",
+        "¿Respeta su empresa el medioambiente?",
+        "¿Emite su empresa en el desarrollo de su objeto social algún tipo de radiaciones?",
+        "¿Cuenta su empresa o tiene planeado contratar trabajadores extranjeros?",
+        "¿Ha estado, está o es probable que su empresa en no esté al corriente de pago con sus acreedores?",
+        "¿Cuenta su empresa con un sistema de contabilidad que refleja fielmente su situación financiera? ",
+        "¿Ha tenido, tiene, o es probable que su empresa tenga alguna deuda con la Hacienda Pública o la Seguridad Social?",
+        "¿Se utilizan en su empresa documentos o materiales protegidos por los derechos de propiedad intelectual o industrial?",
+        "¿Cuentan con tarjetas de crédito-débito o cheques de viaje en su empresa?",
+        "¿Su empresa tiene algún tipo de vínculo con partidos políticos?",
+        "¿Se utilizan en su empresa equipos informáticos?",
+        "¿En atención al objeto social de su empresa se trabaja con organos humanos o se realizan trasplantes?",
+        "¿Cabe alguna posibilidad, aunque sea remota de que en el seno de su propia empresa, o a través de relaciones con otras empresas, se esté explotando de cualquier forma, traficando o incluso exclavizado..., a seres humanos?",
+        "¿Tiene su empresa como público objetivo a menores de edad o a incapaces o se sirve de menores e incapaces para la venta de sus productos (p.ej. una campaña publicitaria)?",
+        "A la hora de ofrecer productos o servicios, respeta su empresa la diversidad cultural, étnica, religiosa, etc. de la sociedad actual?",
+        "En atención al objeto social de su empresa, se realizan algún tipo de construcciones o edificaciones?",
+        "A la hora de desarrollar su actividad, trabaja, manipula, transporta o comercializa con explosivos u otros agente similares?",
+        "¿Cabe la posibilidad de que, algún profesional de su empresa, descubra o revele información privada de otra persona física o jurídica sin su consentimiento?",
+        "¿Pueden los miembros de su empresa acceder o facilitar el acceso de terceros a sistemas de información?",
+        "¿Son conscientes en su empresa del carácter personal de las contraseñas e identificadores informáticos?",
+        "¿Recibe o realiza su empresa pagos en efectivo?",
+        "¿Mantienen relaciones comerciales sus empleados o administradores con terceros en nombre de su empresa?"
+      ];
+
+      var posiciones = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
+      indice_peligrosidad = 0;
+      var i = 0;
+
+      var email = "andreeiitaa100@gmail.com";
+
+      var email = getElementById('email');
+
+
+      function jugar(){
+
+        if(email == null){
+            alert("por favo0r rellene el email");
+            return;
+        }else{
+
+
+
+          g2.refresh(indice_peligrosidad);
+
+          if(i<=28){
+            document.getElementById("pregunta").innerHTML = preguntas[i];
+          }else{
+            // Ir al email
+            if(indice_peligrosidad <= 25){
+              alert("email alerta baja");
+            }else if(indice_peligrosidad > 25 && indice_peligrosidad <= 65){
+              alert("email peligro medio");
+            }else if(indice_peligrosidad > 65){
+              alert("email peligro alto");
+            }
+
+          }
+        }
+
+        function comprobar(){
+          var respuesta = $("input[type=radio]:checked").val();
+
+          if(respuesta != null){
+
+            if(respuesta== "si"){
+
+              if(i == 0){
+                indice_peligrosidad += 15;
+              }else if(i == 1){
+                indice_peligrosidad += 10;
+              }else if(i == 5 || i == 6 || i == 7 || i == 9 || i == 10 || i == 15 || i == 20 || i == 22 || i == 27 || i == 28){
+                indice_peligrosidad += 3;
+              }else if(i == 11  || i == 14 || i == 17 || i == 24 || i == 25 || i == 26){
+                indice_peligrosidad += 1;
+              }else if(i == 13){
+                indice_peligrosidad += 2;
+              }else if(i == 16 || i == 18 || i == 19){
+                indice_peligrosidad += 5;
+              }else if(i == 23){
+                indice_peligrosidad += 4;
+              }
+
+            }else{
+
+              if(i == 2 || i == 3 || i == 4 || i == 8 || i == 12 || i == 21){
+                indice_peligrosidad += 3;
+              }
+
+            }
+
+            i++;
+            jugar();
+
+          }else{
+            Email.send({
+                Host : "smtp.yourisp.com",
+                Username : "RSAC",
+                Password : "juancarlos123",
+                To : email,
+                From : "you@isp.com",
+                Subject : "Resultados test compliance",
+                Body : "usted tiene un problema gordo"
+            }).then(
+              message => alert(message)
+            );
+          }
+
+        }
+
+      }
+
+    </script>
+
+  </body>
+</html>
